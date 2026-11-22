@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>充值 · Deekseep</title>
+<link rel="stylesheet" href="/site/style.css">
+<style>
+  .wrap { width: min(680px, calc(100% - 40px)); margin: 0 auto; padding: 64px 0 80px; }
+  h1 { font-size: clamp(28px, 5vw, 40px); letter-spacing: -0.03em; margin: 0 0 12px; }
+  .lead { color: var(--muted); margin: 0 0 36px; }
+  .card { border: 1px solid var(--line); border-radius: 18px; background: #fff; padding: 22px; margin-bottom: 18px; }
+  .card h2 { font-size: 18px; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .card p { margin: 0 0 10px; color: var(--ink-soft); font-size: 15px; }
+  .card .muted { color: var(--muted); font-size: 13px; }
+  .qr-img { width: 200px; border: 1px solid var(--line); border-radius: 14px; margin: 14px 0; background: #fff; }
+  ol { margin: 0; padding-left: 18px; color: var(--ink-soft); font-size: 15px; }
+  li { margin-bottom: 6px; }
+  .back { display: inline-block; margin-top: 10px; font-size: 14px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="eyebrow">充值</p>
+  <h1>两种方式，看你属于哪种。</h1>
+  <p class="lead">用公司额度的人在这里充值；自带 Key 的人在自己的 DeepSeek 账号里充，我们不碰你的钱。</p>
+
+  <section class="card">
+    <h2>① 用公司额度（推荐）</h2>
+    <p><b>第一步</b>：在 App 的「账号 → 充值」里拿到 6 位充值码。<b>第二步</b>：扫码转账，备注里填这个码。<b>第三步</b>：管理员确认后额度立刻到账，App 里「今日费用 / 剩余额度」会跟着更新。</p>
+    <p class="muted">充值码举例：<code>308337</code>（每个账号每次申请都会生成新的）</p>
+    <img class="qr-img" src="/site/assets/wechat-qr.png" alt="加微信开通额度">
+    <p class="muted">扫上面这个码加微信，说明你的账号名和要充的金额即可。工作时间内通常 10 分钟到账。</p>
+  </section>
+
+  <section class="card">
+    <h2>② 自带 DeepSeek Key</h2>
+    <p>不需要给我们付钱。登录 <a href="https://platform.deepseek.com/top_up" target="_blank" rel="noreferrer">platform.deepseek.com</a> 充值，再把 API Key 填进 App 的「用自己的 Key」，费用全部在你自己账号里结算。</p>
+    <p class="muted">这种方式我们不显示任何费用，也看不到你的 Key。</p>
+  </section>
+
+  <section class="card">
+    <h2>③ 只是想让这件事继续</h2>
+    <p>如果你不需要额度，只是愿意支持后续开发：<a href="/#support">这里扫码赞助 ¥6.60</a>。赞助不等于充值，不会增加额度。</p>
+  </section>
+
+  <a class="back" href="/">← 回到 Deekseep</a>
+</main>
+</body>
+</html>

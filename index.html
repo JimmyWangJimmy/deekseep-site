@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deekseep — 让对话不中断</title>
+<meta name="description" content="Deekseep 为你留住和 DeepSeek 说过的每一句话：额度会变，对话不断。">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:title" content="Deekseep — 让对话不中断">
+<meta property="og:description" content="额度会变，对话不断。">
+<meta property="og:image" content="/site/assets/icon-512.png">
+<link rel="icon" href="assets/mark.png">
+<link rel="stylesheet" href="/site/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="shell nav-inner">
+    <a class="wordmark" href="#top">
+      <img src="assets/mark.png" alt="" width="26" height="24">
+      <span>Deekseep</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#capability">为什么</a>
+      <a href="#principles">价值</a>
+      <a href="#howto">上手</a>
+      <a href="#versions">版本</a>
+      <a href="#support">支持</a>
+      <a href="recharge.html">充值</a>
+    </nav>
+    <a class="pill" href="download">下载 App</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero shell">
+    <p class="eyebrow">Deekseep · Android</p>
+    <h1>你和 DeepSeek 说过的话，<br><em>不该有保质期。</em></h1>
+    <p class="lede">
+      额度会用完，会话会被清理，早期的记录说没就没——
+      我们做 Deekseep，就为了让陪伴成为最长情的告白。
+    </p>
+    <div class="hero-actions">
+      <a class="btn-dark" href="download">下载 Android 版</a>
+      <a class="btn-text" href="#howto">先看看怎么用 <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="hero-meta" id="heroMeta">正在读取版本…</p>
+  </section>
+
+  <section class="shell hero-visual">
+    <figure class="archive">
+      <img src="assets/archive.png" alt="对话档案：从 2023 年到现在，每一段都留着">
+    </figure>
+    <div class="hero-aside">
+      <p class="aside-lede">一段对话真正的价值，往往在很久以后才出现。</p>
+      <dl class="facts">
+        <div><dt>保存方式</dt><dd>每轮回答后自动同步</dd></div>
+        <div><dt>保存期限</dt><dd>不设上限，我们不清</dd></div>
+        <div><dt>模型</dt><dd>直连 DeepSeek 官方 API</dd></div>
+        <div><dt>首次使用</dt><dd>无需申请，免费试用</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="capability" class="shell section">
+    <div class="section-head">
+      <p class="eyebrow">01 — 产品功能</p>
+      <h2>三件事，前两件最重要。</h2>
+      <p class="lede">
+        你可能也遇到过：聊到一半额度用完了；换了个账号，旧对话就找不回来了。
+        我们把这两件事分别解决掉——而且不让聊天绕远路。
+      </p>
+    </div>
+    <ol class="rows">
+      <li>
+        <span class="num">01</span>
+        <div class="row-body">
+          <h3>一键迁移 DeepSeek 原有会话</h3>
+          <p>把你在 DeepSeek 网页版的历史对话整批搬进来：在导出页登录一次，服务器代跑导出，
+             手机端输入导入码就能落到本地。以前那些"说不完的话"，接得上。</p>
+        </div>
+        <span class="tag">核心 · 迁移</span>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <div class="row-body">
+          <h3>DeepSeek API 直连</h3>
+          <p>聊天请求从手机直接发往 api.deepseek.com，<b>不经过我们的服务器</b>：
+             没有中转、没有排队、没有第二个副本。模型、深度思考、联网搜索和官方一致。</p>
+        </div>
+        <span class="tag">核心 · 直连</span>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <div class="row-body">
+          <h3>也支持用你自己的 Key</h3>
+          <p>不想走我们的账号，就把自己的 DeepSeek API Key 填进来，费用在你自己的平台账户里结算，
+             我们不碰钱、也看不到 Key。</p>
+        </div>
+        <span class="tag">可选 · BYOK</span>
+      </li>
+    </ol>
+  </section>
+
+  <section class="shell section">
+    <div class="section-head">
+      <p class="eyebrow">02 — 数据怎么走</p>
+      <h2>聊天不经过我们，所以也留不下。</h2>
+      <p class="lede">
+        所有对话请求从手机直接发往 DeepSeek 服务器，我们这条链路里没有对话原文。
+        服务器只做三件事：发账号、发 Key、按天汇总 token 数算钱。
+      </p>
+    </div>
+    <div class="principles" style="color:var(--ink)">
+      <article style="border-top-color:var(--line)">
+        <h3 style="color:var(--ink)">会话不过期</h3>
+        <p style="color:var(--muted)">对话存在你自己的手机里，随时可导出成文件带走；平台那边清理了，你这边还在。</p>
+      </article>
+      <article style="border-top-color:var(--line)">
+        <h3 style="color:var(--ink)">没有时段限额</h3>
+        <p style="color:var(--muted)">不按"每天几点到几点"限制你；额度按量计，白天深夜都一个价。</p>
+      </article>
+      <article style="border-top-color:var(--line)">
+        <h3 style="color:var(--ink)">备份可选</h3>
+        <p style="color:var(--muted)">想让换手机不丢，可以在设置里开备份；不开就完全只在本机。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="quote">
+    <blockquote>陪伴，是最长情的告白。<br>我们只是把它保存下来。</blockquote>
+    <cite>Deekseep · 产品原则</cite>
+  </section>
+
+  <section id="principles" class="band">
+    <div class="shell">
+      <p class="eyebrow">02 — 原则</p>
+      <h2>我们相信的三件事。</h2>
+      <div class="principles">
+        <article>
+          <h3>长情</h3>
+          <p>工具可以换，记录不该丢。我们把它当一份可以一直续写的文件，而不是一次性的聊天窗口。</p>
+        </article>
+        <article>
+          <h3>诚实</h3>
+          <p>今日、本周花了多少钱，明明白白写在账号里。单价跟 DeepSeek 平台一致，不玩积分和倍率。</p>
+        </article>
+        <article>
+          <h3>克制</h3>
+          <p>界面只留两个开关：深度思考、联网搜索。没有一堆让人猜的参数，也没有必须点的弹窗。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="howto" class="shell section">
+    <div class="section-head">
+      <p class="eyebrow">03 — 开始用</p>
+      <h2>三步，接着上次往下说。</h2>
+    </div>
+    <div class="steps">
+      <article>
+        <span class="num">01</span>
+        <h3>装 App</h3>
+        <p>下载 APK，允许安装未知来源即可。Android 8.0 以上。</p>
+      </article>
+      <article>
+        <span class="num">02</span>
+        <h3>登录，它还记得你</h3>
+        <p>打开就是对话页。登录后旧对话自动回来，从上次断掉的地方继续。</p>
+      </article>
+      <article>
+        <span class="num">03</span>
+        <h3>开始提问</h3>
+        <p>模型由管理员配好，你要做的只有把问题说清楚。</p>
+      </article>
+    </div>
+    <div class="shots">
+      <figure><img src="assets/guest.png" alt="访客首页"><figcaption>打开就是对话页</figcaption></figure>
+      <figure><img src="assets/account.png" alt="账号面板"><figcaption>账号 / 费用 / 充值</figcaption></figure>
+      <figure><img src="assets/import.png" alt="导入对话"><figcaption>历史对话导入</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="shell section app-shot">
+    <div class="section-head">
+      <p class="eyebrow">04 — 在手机上</p>
+      <h2>打开就是上次的地方。</h2>
+      <p class="lede">不弹登录、不问参数。它记得你上次聊到哪，也记得你没说完的那句话。</p>
+    </div>
+    <div class="device-row">
+      <figure class="device"><img src="assets/guest.png" alt="打开 App 的首页"></figure>
+      <figure class="device"><img src="assets/chat.png" alt="继续一段对话"></figure>
+    </div>
+  </section>
+
+  <section id="download" class="shell section">
+    <div class="section-head">
+      <p class="eyebrow">05 — 下载</p>
+      <h2>装到手机上。</h2>
+    </div>
+    <div class="download">
+      <img class="app-icon" src="assets/icon-512.png" alt="" width="72" height="72">
+      <div class="dl-copy">
+        <p class="dl-version"><span id="dlVersion">—</span> <span class="dl-dot">·</span> <span id="dlMeta">读取中…</span></p>
+        <p class="dl-hash" id="dlHash"></p>
+      </div>
+      <a class="btn-dark" href="download" id="dlBtn">下载 APK</a>
+    </div>
+    <details class="note">
+      <summary>第一次安装会提示「未知来源」</summary>
+      <p>点开下载好的 APK，系统会问是否允许当前应用安装应用——允许这一次即可。装完可以在 App 里「检查更新」升级，不用再找人要安装包。</p>
+    </details>
+  </section>
+
+  <section id="versions" class="shell section">
+    <div class="section-head">
+      <p class="eyebrow">06 — 版本</p>
+      <h2>每次更新都写清楚改了什么。</h2>
+    </div>
+    <table class="table" id="versionTable">
+      <thead><tr><th>版本</th><th>时间</th><th>大小</th><th>说明</th></tr></thead>
+      <tbody><tr><td colspan="4" class="muted">读取中…</td></tr></tbody>
+    </table>
+  </section>
+
+  <section id="about" class="shell section about">
+    <div>
+      <p class="eyebrow">07 — 关于</p>
+      <h2>Deekseep 这个名字。</h2>
+      <p class="prose">
+        DeepSeek 是模型的名字，Deekseep 是我们的名字——一个我们自己起的、和它并肩站着的名字。
+        底层全部直连 DeepSeek 官方 API，模型能力一点没变；我们多做了一件事：把对话留下来。
+      </p>
+      <p class="prose">
+        客户端基于 <a href="https://github.com/deepseek-ai/chat-demo" target="_blank" rel="noreferrer">deepseek-ai/chat-demo</a>
+        的接口协议，用 Kotlin + Jetpack Compose 重写。Deekseep 不是 DeepSeek 官方产品，
+        与深度求索公司没有隶属关系。
+      </p>
+    </div>
+    <div class="contact">
+      <p class="contact-label">加我微信</p>
+      <img class="qr" src="assets/wechat-qr.png" alt="微信二维码：日月明">
+      <p class="muted small">开通账号、充值、问题反馈、想聊聊产品——都扫这个。</p>
+      <p class="muted small">邮箱：<a href="mailto:JimmyWangJimmy@outlook.com">JimmyWangJimmy@outlook.com</a></p>
+    </div>
+  </section>
+
+  <section id="support" class="shell section support">
+    <div class="support-card">
+      <div class="support-copy">
+        <p class="eyebrow">06 — 支持</p>
+        <h2>如果你愿意，帮我们把这件事做下去。</h2>
+        <p class="lede">
+          Deekseep 现在是一个人往前推。扫码赞助 <b>¥6.60</b>——一杯咖啡的钱，
+          用来付服务器和模型调用的账单。赞助不等于充值，不会增加你的额度。
+        </p>
+      </div>
+      <figure class="support-qr">
+        <img src="assets/sponsor-qr.png" alt="微信支付赞助码 ¥6.60">
+        <figcaption>微信扫码 · ¥6.60</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell foot-inner">
+    <div class="foot-brand">
+      <img src="assets/mark.png" alt="" width="22" height="20">
+      <span>Deekseep</span>
+    </div>
+    <nav class="foot-links">
+      <a href="#capability">为什么</a>
+      <a href="#principles">原则</a>
+      <a href="#versions">版本</a>
+      <a href="/export">网页端导出</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Deekseep · 模型能力来自 DeepSeek 官方 API</p>
+  </div>
+</footer>
+
+<script src="/site/app.js"></script>
+</body>
+</html>
