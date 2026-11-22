@@ -58,8 +58,12 @@ function renderLatest(releases) {
   setText('dlMeta', `${formatDate(latest.released_at)} 发布 · ${formatSize(latest.size)} · Android 8.0+`)
   setText('dlSize', formatSize(latest.size))
   if (latest.sha256) setText('dlHash', 'SHA-256 ' + latest.sha256)
-  const download = document.getElementById('dlBtn')
-  if (download && API_BASE) download.href = API_BASE + '/download'
+  // 静态托管（GitHub Pages）时，所有下载入口都指向控制面
+  if (API_BASE) {
+    document.querySelectorAll('.js-download').forEach((el) => {
+      el.href = API_BASE + '/download'
+    })
+  }
   setText('heroMeta', `最新版 v${latest.version_name} · ${formatSize(latest.size)} · 免费试用`)
 }
 
