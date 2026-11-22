@@ -4,7 +4,7 @@
  */
 // GitHub Pages 是纯静态托管，接口在控制面上，跨域访问（服务端已开 CORS）
 const API_BASE = /github\.io$/.test(location.hostname) || location.protocol === 'file:'
-  ? 'https://cool-module-sellers-harris.trycloudflare.com'
+  ? 'https://deekseep.duckdns.org:9443'
   : ''
 
 const CONTACT = {
